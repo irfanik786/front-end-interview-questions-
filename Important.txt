@@ -1,0 +1,246 @@
+Front-end Interview:
+
+######################################################################################################################################################################
+HTML:-
+CSR (Client-Side Rendering) and SSR (Server-Side Rendering) diffrences ?
+Ans -> 
+CSR : 
+Rendered in the browser (client).
+Slower initial load time; waits for JavaScript to execute.
+Faster for subsequent interactions (updates via JavaScript).
+SEO can be challenging; requires proper configuration (e.g., pre-rendering).
+More interactive and dynamic after initial load.
+Easier to build interactive UIs with frameworks like React, Angular.
+SSR : 
+Rendered on the server before sending to the client.
+Faster initial load; sends a fully rendered page.
+Each navigation reloads the page from the server.
+Better SEO support; content is available for search engines.
+Can be less dynamic but improves perceived performance.
+More complex setup; requires handling server-side logic.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+######################################################################################################################################################################
+CSS:-
+what is box model ?
+Ans - The CSS Box Model is a fundamental concept that defines how elements on a web page are structured and displayed. Every element in CSS is treated as a box, 
+and the box model determines the size and spacing of that element.
+The CSS Box Model consists of four parts:
+* Content: The actual content of the box, such as text, images, or other elements.
+* Padding: The space between the content and the border. Padding increases the space inside the box, and it is transparent.
+* Border: The edge surrounding the padding. You can style the border with different widths, colors, and styles.
+* Margin: The space outside the border, creating distance between the element and other elements on the page. Margins are also transparent.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is display ?
+Ans - Defines how an element is displayed on the page.
+Common Display Values:
+* display: block;
+    The element is displayed as a block-level element, taking up the full width available, with line breaks before and after.
+    Example: <div>, <h1>, <p>
+* display: inline;
+    The element is displayed as an inline element, flowing within the text without breaking to a new line.
+    Example: <span>, <a>
+* display: inline-block;
+    Combines features of inline and block. The element does not break the line (like inline), but you can apply width, height, and margins (like block).
+* display: flex;
+    Enables a flexbox container, which allows for flexible, dynamic layouts where items can align, wrap, and distribute space within the container.
+* display: grid;
+    Enables a grid container, providing a two-dimensional layout system that allows items to be placed in rows and columns.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Difference between flex and grid ?
+Ans - 
+Feature     	            Flexbox	                                 Grid
+Layout	        One-dimensional (row or column)	        Two-dimensional (rows and columns)
+Use Case	    Simple alignment in one direction	    Complex layouts (rows + columns)
+Control	        Align and space in a single axis	    Control both row and column placements
+Responsiveness	Good for simple responsive layouts	    Great for complex, adaptable layouts
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+define selectors and how to use ?
+Ans - CSS Selectors are used to target specific HTML elements and apply styles to them.
+There are several types of selectors:
+* Universal Selector: `*` - Selects all elements on the page.
+* Element Selector: `h1`, `.class`, `#id` - Selects elements based
+* Class Selector: `.class` - Selects elements with a specific class.
+* ID Selector: `#id` - Selects elements with a specific ID.
+* Pseudo-Class Selector: `:hover`, `:active` - Selects elements based on 
+* Pseudo-Element Selector: `::before`, `::after` - Selects elements based
+* Attribute Selector: `[attribute]`, `[attribute="value"]` - Selects elements based on
+* Child Selector: `parent > child` - Selects child elements within a parent element.
+* Descendant Selector: `parent child` - Selects elements that are descendants of a parent element
+* Adjacent Sibling Selector: `h1 + p` - Selects elements that are adjacent
+* General Sibling Selector: `h1 ~ p` - Selects elements that are siblings of
+* Grouping Selector: `h1, h2, h3` - Selects multiple elements
+* Pseudo-class and pseudo-element selectors can be combined with other selectors to create more complex rules.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+z index ?
+Ans -> z-index in CSS controls the stacking order of overlapping elements. Elements with higher z-index values appear on top of those with lower values. 
+It works only on positioned elements (relative, absolute, fixed, or sticky).
+
+position relative and absolute explain ?
+Ans -> 
+* position: relative;:
+Positions the element relative to its normal position in the document flow. It can be shifted using top, right, bottom, or left without affecting surrounding elements.
+* position: absolute;:
+Positions the element relative to its nearest positioned ancestor (not the parent). It can be shifted using top
+, right, bottom, or left, and it will be removed from the document flow, meaning it
+will not affect surrounding elements.
+
+######################################################################################################################################################################
+Js:-
+callbacks in js ?
+Ans -> Callbacks in JavaScript are functions passed as arguments to other functions, allowing them to be executed after a certain event or action is completed. 
+They enable asynchronous programming by allowing you to specify what to do after an operation finishes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is promises ?
+Ans -> A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation. 
+It allows you to handle asynchronous tasks like API calls in a more readable way.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is promise.all ?
+Ans -> Promise.all() is a method in JavaScript that takes an array of promises and returns a single Promise that resolves when all of the promises 
+in the array have resolved. If any promise fails (is rejected), Promise.all() immediately rejects with the reason of the first rejected promise.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is event loop ?
+Ans -> The Event Loop in JavaScript is a mechanism that allows asynchronous execution by managing the execution of code, events, and messages.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is higher order function ?
+Ans -> A Higher-Order Function (HOF) in JavaScript is a function that takes another function
+as an argument or returns a function as a result.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is prototypes in JS ?
+Ans -> rototypes in JavaScript are objects that allow for inheritance and property sharing. Every object has an internal [[Prototype]] reference, 
+enabling the prototype chain. When you access a property or method, JavaScript looks up the prototype chain until it finds the property or reaches null.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how this kyword works ?
+Ans -> The this keyword in JavaScript refers to the context in which a function is executed. Its value can vary depending on how a function is called.
+
+######################################################################################################################################################################
+React:-
+why react is faster ?
+Ans -> React is faster due to several key features:
+Virtual DOM: React uses a lightweight representation of the actual DOM (the Virtual DOM). It minimizes direct DOM manipulation, allowing for efficient updates.
+Reconciliation: React efficiently updates the UI by comparing the new Virtual DOM with the previous version and only applying changes where necessary.
+Batching Updates: React batches state updates and re-renders to reduce the number of reflows and repaints, improving performance.
+Optimized Rendering: React components can be optimized using techniques like shouldComponentUpdate and React.memo, preventing unnecessary renders.
+Declarative UI: React's declarative approach allows developers to describe what the UI should look like, simplifying rendering logic and enhancing performance.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is higher order components ?
+Ans -> Higher-Order Components (HOCs) in React are functions that take a component as an argument and return a new component. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+why hooks are necessary in react ?
+Ans ->Hooks are necessary in React because they provide a way to use state and other React features without having to
+wrap your component in a class. This makes it easier to write functional components and reuse code between them
+Hooks also provide a way to manage side effects, such as making API calls or subscribing to events,
+without having to use a class component.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+advantage and disadvantage of use react ?
+Ans -> 
+Advantages of Using React:
+    Component-Based: Encourages reusable and maintainable code.
+    Virtual DOM: Enhances performance by minimizing direct DOM manipulations.
+    Declarative: Simplifies code understanding and prediction.
+    Strong Ecosystem: Rich libraries and community support.
+    Flexibility: Usable for web, mobile, and desktop applications.
+Disadvantages of Using React:
+    Learning Curve: New concepts can be challenging for beginners.
+    Rapid Changes: Frequent updates can be hard to keep up with.
+    Boilerplate Code: Initial setup may involve more code.
+    SEO Challenges: Client-side rendering complicates SEO.
+    Performance Overhead: Virtual DOM may add overhead for small apps.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+can browser read jsx directly ?
+Ans -> No, browsers cannot read JSX directly. JSX is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. 
+Before browsers can execute JSX, it must be transformed (or compiled) into regular JavaScript using tools like Babel.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+middleware with redux ?
+Ans -> Middleware in Redux is a way to enhance the store's capabilities, allowing you to intercept and process actions before they reach the reducer. 
+It acts as a bridge between dispatching an action and the moment it reaches the reducer.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+can react component re-render without calling set state ?
+Ans -> Yes, a React component can re-render without calling setState under certain conditions:
+Parent Component Re-renders: If a parent component re-renders, all its child components will re-render, regardless of whether their state has changed.
+Context Changes: If a component consumes context values via the Context API, it will re-render when the context value changes, even without a state update.
+Props Changes: If a component receives new props from its parent, it will re-render to reflect the new data.
+Force Update: You can manually trigger a re-render using forceUpdate(), though this is generally discouraged.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+life cycle method ?
+Ans -> React lifecycle methods are hooks that allow you to run code at specific points in a component's life, particularly in class components. Here's a brief overview:
+Phases: Mounting, Updating, Unmounting.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useRef ?
+Ans -> useRef is a Hook in React that allows you to create a reference to a DOM element or a
+value that persists for the full lifetime of a component. It's similar to the ref attribute in JSX
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useCallback ?
+Ans -> useCallback is a Hook in React that memoizes a function so that it's not recreated on every
+render. This can improve performance by preventing unnecessary re-renders of child components.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useMemo ?
+Ans -> useMemo is a Hook in React that memoizes a value so that it's not recalculated on
+every render. This can improve performance by preventing unnecessary re-renders of child components.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useReducer ?
+Ans -> useReducer is a Hook in React that allows you to manage state in a more functional way. It
+takes a reducer function and an initial state, and returns the current state and a dispatch function.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useContext ?
+Ans -> useContext is a Hook in React that allows you to access context values in a functional component. It
+takes a context object as an argument and returns the current context value.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useEffect ?
+Ans -> useEffect is a Hook in React that allows you to run side effects after rendering, such as setting
+timers, making API calls, or updating the DOM. It takes a function and an optional dependency array
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
