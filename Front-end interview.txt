@@ -1,0 +1,583 @@
+Front-end Interview:
+
+######################################################################################################################################################################
+HTML:-
+CSR (Client-Side Rendering) and SSR (Server-Side Rendering) diffrences ?
+Ans -> 
+CSR : 
+Rendered in the browser (client).
+Slower initial load time; waits for JavaScript to execute.
+Faster for subsequent interactions (updates via JavaScript).
+SEO can be challenging; requires proper configuration (e.g., pre-rendering).
+More interactive and dynamic after initial load.
+Easier to build interactive UIs with frameworks like React, Angular.
+SSR : 
+Rendered on the server before sending to the client.
+Faster initial load; sends a fully rendered page.
+Each navigation reloads the page from the server.
+Better SEO support; content is available for search engines.
+Can be less dynamic but improves perceived performance.
+More complex setup; requires handling server-side logic.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the purpose of the doctype declaration?
+Ans -> The <!DOCTYPE> declaration defines the document type and version of HTML. It helps the browser
+render the page correctly.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the difference between block-level and inline elements in HTML?
+Ans -> Block-level elements: Take up full width, start on a new line, and can contain both block and inline elements (e.g., <div>, <p>).
+Inline elements: Take up only the necessary width, stay in the same line, and usually contain text or other inline elements (e.g., <span>, <a>).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are semantic HTML tags, and why are they important?
+Ans -> Semantic HTML tags clearly describe their meaning in a human- and machine-readable way.
+They improve accessibility, SEO, and code readability.
+
+
+
+
+######################################################################################################################################################################
+CSS:-
+
+What is the difference between display: none and visibility: hidden?
+Ans ->  display: none removes the element from the document, while visibility: hidden makes the element
+invisible but still occupies space.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How would you implement a responsive design? What frameworks or methods do you prefer?
+Ans ->  Responsive design can be implemented using media queries, flexbox, grid, or frameworks like
+Bootstrap and Tailwind CSS.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are media queries, and how do you use them?
+Ans ->  Media queries are used to apply CSS based on device characteristics like screen size, typically
+for responsive design.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the difference between relative, absolute, fixed, and sticky positioning in CSS.
+Ans ->  Relative is positioned relative to its normal position, absolute relative to its nearest ancestor, fixed
+relative to the viewport, and sticky toggles between relative and fixed.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Flexbox, and when would you use it?
+Ans -> Flexbox is a layout model for one-dimensional layouts like rows or columns and is useful for
+responsive designs.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is CSS Grid, and how does it differ from Flexbox?
+Ans -> CSS Grid is a two-dimensional layout system, useful for both rows and columns, while Flexbox is
+one-dimensional.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How do you optimize CSS for performance?
+Ans -> To optimize CSS performance: minify CSS, remove unused styles, reduce file size, avoid deep
+selectors, and use modern layouts like Flexbox or Grid.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is box model ?
+Ans - The CSS Box Model is a fundamental concept that defines how elements on a web page are structured and displayed. Every element in CSS is treated as a box, 
+and the box model determines the size and spacing of that element.
+The CSS Box Model consists of four parts:
+* Content: The actual content of the box, such as text, images, or other elements.
+* Padding: The space between the content and the border. Padding increases the space inside the box, and it is transparent.
+* Border: The edge surrounding the padding. You can style the border with different widths, colors, and styles.
+* Margin: The space outside the border, creating distance between the element and other elements on the page. Margins are also transparent.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is display ?
+Ans - Defines how an element is displayed on the page.
+Common Display Values:
+* display: block;
+    The element is displayed as a block-level element, taking up the full width available, with line breaks before and after.
+    Example: <div>, <h1>, <p>
+* display: inline;
+    The element is displayed as an inline element, flowing within the text without breaking to a new line.
+    Example: <span>, <a>
+* display: inline-block;
+    Combines features of inline and block. The element does not break the line (like inline), but you can apply width, height, and margins (like block).
+* display: flex;
+    Enables a flexbox container, which allows for flexible, dynamic layouts where items can align, wrap, and distribute space within the container.
+* display: grid;
+    Enables a grid container, providing a two-dimensional layout system that allows items to be placed in rows and columns.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Difference between flex and grid ?
+Ans - 
+Feature     	            Flexbox	                                 Grid
+Layout	        One-dimensional (row or column)	        Two-dimensional (rows and columns)
+Use Case	    Simple alignment in one direction	    Complex layouts (rows + columns)
+Control	        Align and space in a single axis	    Control both row and column placements
+Responsiveness	Good for simple responsive layouts	    Great for complex, adaptable layouts
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+define selectors and how to use ?
+Ans - CSS Selectors are used to target specific HTML elements and apply styles to them.
+There are several types of selectors:
+* Universal Selector: `*` - Selects all elements on the page.
+* Element Selector: `h1`, `.class`, `#id` - Selects elements based
+* Class Selector: `.class` - Selects elements with a specific class.
+* ID Selector: `#id` - Selects elements with a specific ID.
+* Pseudo-Class Selector: `:hover`, `:active` - Selects elements based on 
+* Pseudo-Element Selector: `::before`, `::after` - Selects elements based
+* Attribute Selector: `[attribute]`, `[attribute="value"]` - Selects elements based on
+* Child Selector: `parent > child` - Selects child elements within a parent element.
+* Descendant Selector: `parent child` - Selects elements that are descendants of a parent element
+* Adjacent Sibling Selector: `h1 + p` - Selects elements that are adjacent
+* General Sibling Selector: `h1 ~ p` - Selects elements that are siblings of
+* Grouping Selector: `h1, h2, h3` - Selects multiple elements
+* Pseudo-class and pseudo-element selectors can be combined with other selectors to create more complex rules.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+z index ?
+Ans -> z-index in CSS controls the stacking order of overlapping elements. Elements with higher z-index values appear on top of those with lower values. 
+It works only on positioned elements (relative, absolute, fixed, or sticky).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Describe the difference between em and rem units in CSS.
+em is relative to the parent element?s font size, while rem is relative to the root element?s font size.
+
+
+
+
+######################################################################################################################################################################
+Js:-
+
+Explain the concept of hoisting in JavaScript.
+Ans -> Hoisting moves variable and function declarations to the top of their scope before code execution.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Explain Event loop ?
+Ans -> The event loop allows JavaScript to handle asynchronous operations like callbacks and promises.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the differences between arrow functions and regular functions.
+Ans -> 
+*   Arrow functions are concise and have a more functional programming style.
+*   Regular functions are more verbose and have a more imperative programming style.
+*   Arrow functions do not have their own `this` context, while regular functions do.
+*   Arrow functions cannot be used as constructors, while regular functions can.
+*   Arrow functions are not hoisted, while regular functions are.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain currying ?
+Ans -> Currying transforms a function into a series of functions that each take one argument.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are IIFEs (Immediately Invoked Function Expressions)?
+Ans -> A function that is executed immediately after it is defined.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the use of the bind() method?
+Ans -> bind() creates a new function that, when called, has a specific this value.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are JavaScript data types?
+Ans -> Primitive Types: String, Number, Boolean, Undefined, Null, Symbol, BigInt
+Non-Primitive Type: Object: Complex data, e.g., arrays, functions, objects, { key: "value" }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the concept of prototypal inheritance.
+Ans -> Prototypal inheritance allows objects to inherit properties from other objects.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the purpose of the Array.prototype.map() method?
+Ans -> It creates a new array by applying a function to each element of the array.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the difference between forEach() and map()?
+Ans -> forEach() processes each array element without returning a value, while map() returns a new array
+with transformed elements.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How do you handle errors in JavaScript using try, catch, and finally?
+Ans -> try executes code, catch handles errors, and finally executes code after try/catch regardless of
+outcome.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is a promise chain?
+Ans -> A series of promises where each is dependent on the resolution of the previous one.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is async/await, and how does it relate to Promises?
+Ans -> async/await is syntactic sugar over Promises, allowing asynchronous code to be written more like
+synchronous code
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are closures in JavaScript?
+Ans -> A closure is a function that can access variables from its parent scope even after the parent
+function has closed.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How does JavaScript handle asynchronous operations?
+Ans -> It uses callbacks, Promises, and async/await.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the fetch API, and how is it used?
+Ans -> fetch() is used to make HTTP requests, returning a Promise that resolves to the response.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the difference between let, const, and var.
+Ans -> let and const are block-scoped, var is function-scoped. let can be reassigned, const cannot.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is event delegation in JavaScript?
+Ans -> Event delegation attaches a single event listener to a parent element to handle events from child
+elements
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the difference between synchronous and asynchronous JavaScript?
+Ans -> Synchronous operations block code execution until the current task is finished, while
+asynchronous allows other tasks to run in the background.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain this keyword in JavaScript.
+Ans -> this refers to the object that is currently executing the code, which can vary depending on how a
+function is called.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are arrow functions, and how do they differ from regular functions?
+Ans -> Arrow functions have a shorter syntax and do not have their own this context.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the difference between null, undefined, and NaN? 
+Ans -> null is an intentional absence of value, undefined is an unassigned variable, NaN is a result of
+invalid mathematical operations.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between == and === ?
+Ans -> == compares values after type coercion, === compares both value and type.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+callbacks in js ?
+Ans -> Callbacks in JavaScript are functions passed as arguments to other functions, allowing them to be executed after a certain event or action is completed. 
+They enable asynchronous programming by allowing you to specify what to do after an operation finishes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is promises ?
+Ans -> A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation. 
+It allows you to handle asynchronous tasks like API calls in a more readable way.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is promise.all ?
+Ans -> Promise.all() is a method in JavaScript that takes an array of promises and returns a single Promise that resolves when all of the promises 
+in the array have resolved. If any promise fails (is rejected), Promise.all() immediately rejects with the reason of the first rejected promise.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is event loop ?
+Ans -> The Event Loop in JavaScript is a mechanism that allows asynchronous execution by managing the execution of code, events, and messages.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is higher order function ?
+Ans -> A Higher-Order Function (HOF) in JavaScript is a function that takes another function
+as an argument or returns a function as a result.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is prototypes in JS ?
+Ans -> rototypes in JavaScript are objects that allow for inheritance and property sharing. Every object has an internal [[Prototype]] reference, 
+enabling the prototype chain. When you access a property or method, JavaScript looks up the prototype chain until it finds the property or reaches null.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+how this kyword works ?
+Ans -> The this keyword in JavaScript refers to the context in which a function is executed. Its value can vary depending on how a function is called.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is tree shaking in JavaScript bundlers?
+Ans -> Tree shaking eliminates unused code (dead code) in the final bundle, resulting in smaller output.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How does JavaScript handle event bubbling and event capturing?
+Ans -> Event bubbling propagates events from the target element up the DOM tree, while event
+capturing propagates from the outermost element down.
+
+
+
+
+######################################################################################################################################################################
+React:-
+why react is faster ?
+Ans -> React is faster due to several key features:
+Virtual DOM: React uses a lightweight representation of the actual DOM (the Virtual DOM). It minimizes direct DOM manipulation, allowing for efficient updates.
+Reconciliation: React efficiently updates the UI by comparing the new Virtual DOM with the previous version and only applying changes where necessary.
+Batching Updates: React batches state updates and re-renders to reduce the number of reflows and repaints, improving performance.
+Optimized Rendering: React components can be optimized using techniques like shouldComponentUpdate and React.memo, preventing unnecessary renders.
+Declarative UI: React's declarative approach allows developers to describe what the UI should look like, simplifying rendering logic and enhancing performance.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is higher order components ?
+Ans -> Higher-Order Components (HOCs) in React are functions that take a component as an argument and return a new component. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+why hooks are necessary in react ?
+Ans ->Hooks are necessary in React because they provide a way to use state and other React features without having to
+wrap your component in a class. This makes it easier to write functional components and reuse code between them
+Hooks also provide a way to manage side effects, such as making API calls or subscribing to events,
+without having to use a class component.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+advantage and disadvantage of use react ?
+Ans -> 
+Advantages of Using React:
+    Component-Based: Encourages reusable and maintainable code.
+    Virtual DOM: Enhances performance by minimizing direct DOM manipulations.
+    Declarative: Simplifies code understanding and prediction.
+    Strong Ecosystem: Rich libraries and community support.
+    Flexibility: Usable for web, mobile, and desktop applications.
+Disadvantages of Using React:
+    Learning Curve: New concepts can be challenging for beginners.
+    Rapid Changes: Frequent updates can be hard to keep up with.
+    Boilerplate Code: Initial setup may involve more code.
+    SEO Challenges: Client-side rendering complicates SEO.
+    Performance Overhead: Virtual DOM may add overhead for small apps.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+What is JSX in React?
+Ans -> JSX is a syntax extension that allows writing HTML-like structures in JavaScript
+
+Explain the purpose of state in React components.
+Ans -> State holds dynamic data that changes over time and re-renders the component when updated
+
+Differentiate between functional and class components in React.
+Ans -> Functional components are stateless, while class components can hold state and have lifecycle
+
+What are pure components?
+Ans -> Pure components only re-render when their props or state change, improving performance.
+
+
+can browser read jsx directly ?
+Ans -> No, browsers cannot read JSX directly. JSX is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. 
+Before browsers can execute JSX, it must be transformed (or compiled) into regular JavaScript using tools like Babel.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+middleware with redux ?
+Ans -> Middleware in Redux is a way to enhance the store's capabilities, allowing you to intercept and process actions before they reach the reducer. 
+It acts as a bridge between dispatching an action and the moment it reaches the reducer.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+can react component re-render without calling set state ?
+Ans -> Yes, a React component can re-render without calling setState under certain conditions:
+Parent Component Re-renders: If a parent component re-renders, all its child components will re-render, regardless of whether their state has changed.
+Context Changes: If a component consumes context values via the Context API, it will re-render when the context value changes, even without a state update.
+Props Changes: If a component receives new props from its parent, it will re-render to reflect the new data.
+Force Update: You can manually trigger a re-render using forceUpdate(), though this is generally discouraged.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useRef ?
+Ans -> useRef is a Hook in React that allows you to create a reference to a DOM element or a
+value that persists for the full lifetime of a component. It's similar to the ref attribute in JSX
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useCallback ?
+Ans -> useCallback is a Hook in React that memoizes a function so that it's not recreated on every
+render. This can improve performance by preventing unnecessary re-renders of child components.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useMemo ?
+Ans -> useMemo is a Hook in React that memoizes a value so that it's not recalculated on
+every render. This can improve performance by preventing unnecessary re-renders of child components.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useReducer ?
+Ans -> useReducer is a Hook in React that allows you to manage state in a more functional way. It
+takes a reducer function and an initial state, and returns the current state and a dispatch function.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useContext ?
+Ans -> useContext is a Hook in React that allows you to access context values in a functional component. It
+takes a context object as an argument and returns the current context value.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+useEffect ?
+Ans -> useEffect is a Hook in React that allows you to run side effects after rendering, such as setting
+timers, making API calls, or updating the DOM. It takes a function and an optional dependency array
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UseState ?
+Ans -> useState is a Hook in React that allows you to add state to functional components. It takes an
+initial value and returns an array with the current state and a function to update it.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What problem does Redux solve in a React application?
+Ans -> Redux manages state across a large application, allowing state to be accessed globally.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the roles of actions, reducers, and the store in Redux.
+Ans -> Actions describe changes, reducers update the state, and the store holds the application?s state.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain useReducer ?
+Ans -> useReducer is a React hook that manages state using a reducer function, similar to Redux?s
+reducers
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is the virtual DOM, and how does React use it?
+Ans -> Virtual DOM is a lightweight representation of the real DOM. React updates the virtual DOM and
+selectively updates the real DOM.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the lifecycle methods of a React component.
+Ans -> React lifecycle methods: Mounting (componentDidMount), Updating (componentDidUpdate),
+Unmounting (componentWillUnmount).
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are hooks in React, and how do they differ from class components?
+Ans -> Hooks allow state and other features in functional components, eliminating the need for class
+components.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is prop drilling, and how can you avoid it?
+Ans -> Prop drilling is passing props through many layers of components. It can be avoided with Context
+API or Redux.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are controlled and uncontrolled components in React?
+Ans -> Controlled components have form data managed by React state, while uncontrolled components
+rely on the DOM to manage form data.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Explain the concept of state and props in React.
+Ans -> State is mutable and managed within the component, while props are read-only and passed from
+parent to child.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How do you handle form submissions in React?
+Ans ->  Use controlled components, capture the form's input, and handle it using an event handler like
+onSubmit.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is lazy loading, and how do you implement it?
+Ans ->  Lazy loading defers loading of resources until they are needed, implemented with dynamic
+imports or image attributes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+What are the advantages of using a build tool like Webpack or Parcel?
+Ans -> Build tools bundle files, optimize code (minification, tree-shaking), and enable module
+hot-reloading.
+
+------------------------------------------------------------------------------------------------------
+
+How do you optimize the performance of a web application?
+Ans ->  Optimize web apps by lazy loading, code splitting, minimizing CSS/JS, compressing images,
+caching, and using CDNs.
+
+------------------------------------------------------------------------------------------------------
+
+How would you handle browser compatibility issues?
+Ans -> Browser compatibility can be handled using feature detection, CSS prefixes, polyfills, and
+transpiling using tools like Babel.
+
+------------------------------------------------------------------------------------------------------
+
+Explain how you would set up continuous integration and deployment for a front-end project ?
+Ans -> Use CI/CD tools (GitHub Actions, Jenkins, etc.) to automate testing, building, and deploying your
+front-end project.
+
+------------------------------------------------------------------------------------------------------
+
+What are some ways to reduce the load time of a website?
+Ans -> Reduce load times by minimizing HTTP requests, compressing assets, enabling caching, and
+using a CDN.
+
+------------------------------------------------------------------------------------------------------
+
+What are RESTful APIs, and how do they work?
+Ans -> RESTful APIs use HTTP methods to interact with resources (GET, POST, PUT, DELETE) and
+exchange data, often using JSON
+
+------------------------------------------------------------------------------------------------------
+
+What is CORS, and how do you handle it in a front-end application?
+Ans -> CORS prevents cross-origin requests unless permitted by the server. Handle it by adding
+appropriate headers on the server.
+
+------------------------------------------------------------------------------------------------------
+
+What is a Single Page Application (SPA), and how does it differ from a traditional web app?
+Ans -> SPAs load a single HTML page and dynamically update content using JavaScript, whereas
+traditional web apps reload the entire page.
+
+------------------------------------------------------------------------------------------------------
+
+How does client-side routing work in a SPA?
+Ans -> Client-side routing changes the browser URL and renders different views without refreshing the
+page, typically using libraries like React Router
+
+------------------------------------------------------------------------------------------------------
+
+Explain the differences between localStorage, sessionStorage, and cookies
+Ans -> localStorage persists data even after the browser is closed, sessionStorage clears on browser
+close, cookies are small and sent with HTTP requests
+
+------------------------------------------------------------------------------------------------------
